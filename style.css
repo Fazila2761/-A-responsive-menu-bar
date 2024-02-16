@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 1440px;
+    width: 96%;
+}
+
+.header-area{
+    position: relative;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.3rem 0 1.3rem 0;
+    align-items: center;
+}
+
+.logo{
+    text-decoration: none;
+    font-size: 2rem;
+    color: black;
+}
+
+#check{
+    display: none;
+}
+
+.icons{
+    position: absolute;
+    font-size: 1.5rem;
+    color: black;
+    right: 5%;
+    display: none;
+
+}
+
+.navmenu a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: black;
+    margin-left: 1.5rem;
+}
+.navmenu button{
+    margin-left: 1.5rem;
+    transition: 0.5 ease;
+    cursor: pointer;
+}
+.navmenu a:hover{
+    background-color: rgb(58, 201, 58);
+   
+}
+.navmenu button:hover{
+transform: scale(1.2);
+}
+@media (max-width: 1190px) {
+    .icons{
+        display: inline-flex;
+    }
+
+    #check:checked~.icons #mobile-menu-icon{
+        display: none;
+    }
+
+    .icons #mobile-close-icon{
+        display: none;
+    }
+
+    #check:checked~.icons #mobile-close-icon{
+        display: block;
+    }
+
+    .navmenu{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        transition: .3s ease;
+    }
+    .butt{
+      position: absolute;
+        
+    }
+    #check:checked~.button{
+        height: 20rem;
+    }
+    #check:checked~.navmenu{
+        height: 22rem;
+    }
+
+    .navmenu a {
+        display: block;
+        margin: 1.3rem 2rem;
+        transition: .3s ease;
+        transform: translateY(-50px);
+    }
+
+    #check:checked~.navmenu a{
+        transform: translateY(0);
+    }
+}
+/* -------------------------------------------------------- */
+
+.butt{
+    width:130px;
+    height:30px;
+    background-color: white;
+    color: black;
+    border-color: 1px solid black;
+    font-size: large;
+
+}
